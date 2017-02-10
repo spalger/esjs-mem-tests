@@ -1,0 +1,11 @@
+{
+  "name": "proctor",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "spalger <spalger@users.noreply.github.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "docker-stats": "^0.7.1",
+    "elasticsearch": "github:elastic/elasticsearch-js#master"
+  }
+}

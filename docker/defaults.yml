@@ -1,0 +1,12 @@
+version: '2'
+services:
+  defaults:
+    network_mode: host
+    env_file: .env
+    build:
+      context: .
+    mem_limit: 512M
+    memswap_limit: 512M
+    privileged: true
+    restart: always
+    read_only: true

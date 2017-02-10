@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lodash.get": "^4.4.2",
+    "lodash.transform": "^4.6.0"
+  }
+}

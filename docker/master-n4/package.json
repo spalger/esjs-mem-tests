@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "elasticsearch": "spalger/elasticsearch#master"
+  }
+}
