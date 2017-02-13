@@ -1,56 +1,137 @@
 version: '2'
 services:
-  v3-n0.12:
-    extends:
-      file: docker/defaults.yml
-      service: defaults
-    container_name: v3-n0.12
+  master-n0.12:
+    container_name: master-n0.12
     build:
-      dockerfile: v3-n0.12/Dockerfile
+      context: .
+      dockerfile: master-n0.12/Dockerfile
     labels:
-      com.esjs.nodev: "0.12"
-      com.esjs.esjsv: "3"
-    
-  v4-n0.12:
-    extends:
-      file: docker/defaults.yml
-      service: defaults
-    container_name: v4-n0.12
+      com.esjs.nodev: '0.12'
+      com.esjs.esjsv: master
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
+  master-n4:
+    container_name: master-n4
     build:
-      dockerfile: v4-n0.12/Dockerfile
+      context: .
+      dockerfile: master-n4/Dockerfile
     labels:
-      com.esjs.nodev: "0.12"
-      com.esjs.esjsv: "4"
-    
-  v12-n0.12:
-    extends:
-      file: docker/defaults.yml
-      service: defaults
-    container_name: v12-n0.12
-    build:
-      dockerfile: v12-n0.12/Dockerfile
-    labels:
-      com.esjs.nodev: "0.12"
-      com.esjs.esjsv: "12"
-    
-  v12-n4:
-    extends:
-      file: docker/defaults.yml
-      service: defaults
-    container_name: v12-n4
-    build:
-      dockerfile: v12-n4/Dockerfile
-    labels:
-      com.esjs.nodev: "4"
-      com.esjs.esjsv: "12"
-    
+      com.esjs.nodev: '4'
+      com.esjs.esjsv: master
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
   master-n7:
-    extends:
-      file: docker/defaults.yml
-      service: defaults
     container_name: master-n7
     build:
+      context: .
       dockerfile: master-n7/Dockerfile
     labels:
-      com.esjs.nodev: "7"
-      com.esjs.esjsv: "master"
+      com.esjs.nodev: '7'
+      com.esjs.esjsv: master
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
+  master_old_lodash-n0.12:
+    container_name: master_old_lodash-n0.12
+    build:
+      context: .
+      dockerfile: master_old_lodash-n0.12/Dockerfile
+    labels:
+      com.esjs.nodev: '0.12'
+      com.esjs.esjsv: master_old_lodash
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
+  v12-n0.12:
+    container_name: v12-n0.12
+    build:
+      context: .
+      dockerfile: v12-n0.12/Dockerfile
+    labels:
+      com.esjs.nodev: '0.12'
+      com.esjs.esjsv: '12'
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
+  v12-n4:
+    container_name: v12-n4
+    build:
+      context: .
+      dockerfile: v12-n4/Dockerfile
+    labels:
+      com.esjs.nodev: '4'
+      com.esjs.esjsv: '12'
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
+  v3-n0.12:
+    container_name: v3-n0.12
+    build:
+      context: .
+      dockerfile: v3-n0.12/Dockerfile
+    labels:
+      com.esjs.nodev: '0.12'
+      com.esjs.esjsv: '3'
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
+  v4-n0.12:
+    container_name: v4-n0.12
+    build:
+      context: .
+      dockerfile: v4-n0.12/Dockerfile
+    labels:
+      com.esjs.nodev: '0.12'
+      com.esjs.esjsv: '4'
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M
+  v4-n4:
+    container_name: v4-n4
+    build:
+      context: .
+      dockerfile: v4-n4/Dockerfile
+    labels:
+      com.esjs.nodev: '4'
+      com.esjs.esjsv: '4'
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 512M
+    memswap_limit: 512M

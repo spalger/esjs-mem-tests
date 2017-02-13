@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "elasticsearch": "github:elastic/elasticsearch-js#master",
+    "js-yaml": "^3.8.1",
     "pidusage": "^1.1.1"
   },
   "devDependencies": {
