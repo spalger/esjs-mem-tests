@@ -4,6 +4,8 @@ const jsYaml = require('js-yaml')
 
 const versions = readdirSync(resolve(__dirname, 'docker'))
 
+const MEM_LIMIT = '1G'
+
 const compose = {
   version: '2',
   services: {}
@@ -47,7 +49,7 @@ ENTRYPOINT ["node", "run.js"]`,
     labels: {
       'com.esjs.nodev': nodev,
       'com.esjs.esjsv': esjsv,
-      'com.esjs.memlimit': '1G'
+      'com.esjs.memlimit': MEM_LIMIT
     },
 
     env_file: 'docker/.env',
@@ -55,8 +57,8 @@ ENTRYPOINT ["node", "run.js"]`,
     privileged: true,
     read_only: true,
     restart: 'always',
-    mem_limit: '1G',
-    memswap_limit: '1G'
+    mem_limit: MEM_LIMIT,
+    memswap_limit: MEM_LIMIT
   }
 })
 
