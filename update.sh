@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-node update-compose-config.js
+node build-configs.js
 docker-compose up --build -d --remove-orphans

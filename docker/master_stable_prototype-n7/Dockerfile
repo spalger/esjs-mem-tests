@@ -1,6 +1,6 @@
-FROM node:4
+FROM node:7
 
-ENV VERSION="master_old_lodash-n4"
+ENV VERSION="master_stable_prototype-n7"
 
 COPY $VERSION/package.json /$VERSION/package.json
 WORKDIR /$VERSION

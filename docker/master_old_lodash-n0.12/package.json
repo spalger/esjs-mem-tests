@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "elasticsearch": "spalger/elasticsearch#rollback-deps"
+    "elasticsearch": "spalger/elasticsearch-js#6199aea343f1324790003b201d76c4ea91ee0a80"
   }
 }

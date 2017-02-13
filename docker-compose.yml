@@ -96,6 +96,54 @@ services:
     restart: always
     mem_limit: 1G
     memswap_limit: 1G
+  master_stable_prototype-n0.12:
+    container_name: master_stable_prototype-n0.12
+    build:
+      context: docker
+      dockerfile: master_stable_prototype-n0.12/Dockerfile
+    labels:
+      com.esjs.nodev: '0.12'
+      com.esjs.esjsv: master_stable_prototype
+      com.esjs.memlimit: 1G
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 1G
+    memswap_limit: 1G
+  master_stable_prototype-n4:
+    container_name: master_stable_prototype-n4
+    build:
+      context: docker
+      dockerfile: master_stable_prototype-n4/Dockerfile
+    labels:
+      com.esjs.nodev: '4'
+      com.esjs.esjsv: master_stable_prototype
+      com.esjs.memlimit: 1G
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 1G
+    memswap_limit: 1G
+  master_stable_prototype-n7:
+    container_name: master_stable_prototype-n7
+    build:
+      context: docker
+      dockerfile: master_stable_prototype-n7/Dockerfile
+    labels:
+      com.esjs.nodev: '7'
+      com.esjs.esjsv: master_stable_prototype
+      com.esjs.memlimit: 1G
+    env_file: docker/.env
+    network_mode: host
+    privileged: true
+    read_only: true
+    restart: always
+    mem_limit: 1G
+    memswap_limit: 1G
   v12-n0.12:
     container_name: v12-n0.12
     build:

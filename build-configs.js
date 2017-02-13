@@ -19,6 +19,23 @@ versions.forEach(v => {
   const [, esjsv, nodev] = match
   console.log('writing esjs(%s) node(%s)', esjsv, nodev)
 
+  writeFileSync(
+    resolve(__dirname, 'docker', v, 'Dockerfile'),
+`FROM node:${nodev}
+
+ENV VERSION="${v}"
+
+COPY $VERSION/package.json /$VERSION/package.json
+WORKDIR /$VERSION
+RUN npm install
+
+COPY base /base
+COPY $VERSION /$VERSION
+
+ENTRYPOINT ["node", "run.js"]`,
+    'utf8'
+  )
+
   compose.services[v] = {
     container_name: v,
 
