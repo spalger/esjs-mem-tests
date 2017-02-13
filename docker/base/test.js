@@ -26,7 +26,8 @@ module.exports = function (es, version, defer) {
     client.transport.request({
       path: '/',
       method: 'HEAD'
-    }, cb)
+    })
+    .then(function () { cb() }, cb)
   }
 
   function tock () {

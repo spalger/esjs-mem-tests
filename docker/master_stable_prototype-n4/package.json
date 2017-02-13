@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "elasticsearch": "spalger/elasticsearch-js#stable-prototype"
-  }
-}

@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "elasticsearch": "github:spalger/elasticsearch-js#master"
-  }
-}

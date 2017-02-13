@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "elasticsearch": "spalger/elasticsearch-js#master"
+    "elasticsearch": "elastic/elasticsearch-js#adb3de5b3b56d2dd257e5af4204f4713e4ce55e4"
   }
 }
