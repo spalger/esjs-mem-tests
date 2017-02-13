@@ -1,6 +1,6 @@
-FROM node:0.12
+FROM node:7
 
-ENV VERSION="v12-n0.12"
+ENV VERSION="v12-n7"
 
 COPY $VERSION/package.json /$VERSION/package.json
 WORKDIR /$VERSION

@@ -40,7 +40,7 @@ module.exports = function (es, version, defer) {
         aggs: {
           avg_mem: {
             avg: {
-              field: 'docker.container.name'
+              field: 'docker.memory.rss.total'
             }
           }
         }

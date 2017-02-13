@@ -23,13 +23,14 @@ versions.forEach(v => {
     container_name: v,
 
     build: {
-      context: '.',
+      context: 'docker',
       dockerfile: `${v}/Dockerfile`
     },
 
     labels: {
       'com.esjs.nodev': nodev,
-      'com.esjs.esjsv': esjsv
+      'com.esjs.esjsv': esjsv,
+      'com.esjs.memlimit': '1G'
     },
 
     env_file: 'docker/.env',
@@ -37,8 +38,8 @@ versions.forEach(v => {
     privileged: true,
     read_only: true,
     restart: 'always',
-    mem_limit: '512M',
-    memswap_limit: '512M'
+    mem_limit: '1G',
+    memswap_limit: '1G'
   }
 })
 

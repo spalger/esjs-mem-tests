@@ -1,6 +1,6 @@
-FROM node:4
+FROM node:0.12
 
-ENV VERSION="master-n4"
+ENV VERSION="master-n0.12"
 
 COPY $VERSION/package.json /$VERSION/package.json
 WORKDIR /$VERSION
