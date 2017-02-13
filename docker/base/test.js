@@ -24,28 +24,8 @@ module.exports = function (es, version, defer) {
 
   function tick (cb) {
     client.transport.request({
-      path: '/metricbeat-*/_search',
-      method: 'POST',
-      body: {
-        size: 0,
-        query: {
-          constant_score: {
-            filter: {
-              term: {
-                'docker.container.name': version
-              }
-            }
-          }
-        },
-        aggs: {
-          avg_mem: {
-            avg: {
-              field: 'docker.memory.rss.total'
-            }
-          }
-        }
-      },
-      ignore: [404]
+      path: '/',
+      method: 'HEAD'
     }, cb)
   }
 
