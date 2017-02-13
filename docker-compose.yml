@@ -1,18 +1,5 @@
 version: '2'
 services:
-  proctor:
-    extends:
-      file: docker/defaults.yml
-      service: defaults
-    container_name: proctor
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    build:
-      context: proctor
-    labels:
-      com.esjs.nodev: "7"
-      com.esjs.esjsv: "master"
-
   v3-n0.12:
     extends:
       file: docker/defaults.yml
