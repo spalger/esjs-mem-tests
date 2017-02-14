@@ -11,14 +11,14 @@ services:
     labels:
       com.esjs.nodev: '0.12'
       com.esjs.esjsv: master
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   master-n4:
     container_name: master-n4
     build:
@@ -27,14 +27,14 @@ services:
     labels:
       com.esjs.nodev: '4'
       com.esjs.esjsv: master
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   master-n6:
     container_name: master-n6
     build:
@@ -43,14 +43,14 @@ services:
     labels:
       com.esjs.nodev: '6'
       com.esjs.esjsv: master
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v12-n0.12:
     container_name: v12-n0.12
     build:
@@ -59,14 +59,14 @@ services:
     labels:
       com.esjs.nodev: '0.12'
       com.esjs.esjsv: '12'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v12-n4:
     container_name: v12-n4
     build:
@@ -75,14 +75,14 @@ services:
     labels:
       com.esjs.nodev: '4'
       com.esjs.esjsv: '12'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v12-n6:
     container_name: v12-n6
     build:
@@ -91,14 +91,14 @@ services:
     labels:
       com.esjs.nodev: '6'
       com.esjs.esjsv: '12'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v3-n0.12:
     container_name: v3-n0.12
     build:
@@ -107,14 +107,14 @@ services:
     labels:
       com.esjs.nodev: '0.12'
       com.esjs.esjsv: '3'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v4-n0.12:
     container_name: v4-n0.12
     build:
@@ -123,14 +123,14 @@ services:
     labels:
       com.esjs.nodev: '0.12'
       com.esjs.esjsv: '4'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v8-n0.12:
     container_name: v8-n0.12
     build:
@@ -139,14 +139,14 @@ services:
     labels:
       com.esjs.nodev: '0.12'
       com.esjs.esjsv: '8'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v8-n4:
     container_name: v8-n4
     build:
@@ -155,14 +155,14 @@ services:
     labels:
       com.esjs.nodev: '4'
       com.esjs.esjsv: '8'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB
   v8-n6:
     container_name: v8-n6
     build:
@@ -171,11 +171,11 @@ services:
     labels:
       com.esjs.nodev: '6'
       com.esjs.esjsv: '8'
-      com.esjs.memlimit: 512MB
+      com.esjs.memlimit: 3GB
     env_file: docker/.env
     network_mode: host
     privileged: true
     read_only: true
-    restart: always
-    mem_limit: 512MB
-    memswap_limit: 512MB
+    restart: 'no'
+    mem_limit: 3GB
+    memswap_limit: 3GB

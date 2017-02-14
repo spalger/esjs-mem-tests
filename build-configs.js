@@ -4,7 +4,7 @@ const jsYaml = require('js-yaml')
 
 const versions = readdirSync(resolve(__dirname, 'docker'))
 
-const MEM_LIMIT = '512MB'
+const MEM_LIMIT = '3GB'
 
 const compose = {
   version: '2',
@@ -60,7 +60,7 @@ ENTRYPOINT ["node", "run.js"]`,
     network_mode: 'host',
     privileged: true,
     read_only: true,
-    restart: 'always',
+    restart: 'no',
     mem_limit: MEM_LIMIT,
     memswap_limit: MEM_LIMIT
   }

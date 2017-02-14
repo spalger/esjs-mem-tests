@@ -1,0 +1,8 @@
+docker-machine create \
+  --driver amazonec2 \
+  --amazonec2-region=us-west-1 \
+  --amazonec2-instance-type=c4.8xlarge \
+  --amazonec2-request-spot-instance=true \
+  --amazonec2-spot-price=2 \
+  --amazonec2-root-size=100 \
+  spalger-esjs-memtest-dm-runner
